@@ -1,1 +1,1 @@
-# docker + alpine + mongo
+# docker + mongo

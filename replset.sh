@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mongo $MONGO_MASTER:27017/admin --eval "rs.initiate(\"{\"_id\": \"$MONGO_REPLSET_NAME\", \"members\": [{\"_id\": 0, \"host\": \"$MONGO_MASTER:27017\"}]}\");"
+mongo $MONGO_MASTER:27017/admin --eval "rs.initiate({\"_id\": \"$MONGO_REPLSET_NAME\", \"members\": [{\"_id\": 0, \"host\": \"$MONGO_MASTER:27017\"}]});"
 
 hosts=$(echo $MONGO_SECONDARY | tr "," "\n")
 
